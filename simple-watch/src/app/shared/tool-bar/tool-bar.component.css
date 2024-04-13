@@ -1,0 +1,46 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .tool-bar {
+    background-color: white;
+    box-shadow: 1px 4px 11px -8px #4f4f4f;
+  }
+
+  .flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 24px;
+    &:hover {
+        .sub-menu {
+            display: block;
+        }
+        
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+  }
+
+  .sub-menu {
+    padding: 15px 10px 10px 10px;
+    position: absolute;
+    display: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 1px 4px 11px -8px #4f4f4f;
+    z-index: 10;
+    background-color: white;
+  }
+
+ 

@@ -1,1 +1,16 @@
-<p>tool-bar works!</p>
+<mat-toolbar class="tool-bar">
+    <span>TimeWatch</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="mobileView" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <div *ngIf="!mobileView">
+        <div  class="menu" *ngFor="let menu of menus">
+            <a href={{menu.url}}>{{menu.name}}</a>
+            <div *ngIf="menu.subMenu.length > 0" class="sub-menu" >
+                <a *ngFor="let subMenu of menu.subMenu" href={{subMenu.url}}>{{subMenu.name}}</a>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
