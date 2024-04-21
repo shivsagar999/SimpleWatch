@@ -1,11 +1,12 @@
 import { CommonEngine } from '@angular/ssr';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { SWMenu } from '../../core/entity/sw-menu';
 import { CommonModule } from '@angular/common';
 import { BreakpointObserver, Breakpoints, LayoutModule } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-tool-bar',
@@ -17,11 +18,16 @@ import { BreakpointObserver, Breakpoints, LayoutModule } from '@angular/cdk/layo
 export class ToolBarComponent {
 
   @Input() menus: SWMenu[] = [];
+  @Output() openDrawer = new EventEmitter()
   webView = true;
   mobileView = false;
 
   constructor(private readonly responsive: BreakpointObserver) {
 
+  }
+
+  oenDrawer() {
+    this.openDrawer.emit(true);
   }
 
   ngOnInit() {

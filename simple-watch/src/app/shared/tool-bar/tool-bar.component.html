@@ -1,10 +1,11 @@
 <mat-toolbar class="tool-bar">
-    <span>TimeWatch</span>
-    <span class="example-spacer"></span>
-    <button *ngIf="mobileView" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button *ngIf="mobileView" (click)="oenDrawer()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
 
+    <span>TimeWatch</span>
+    <span class="example-spacer"></span>
+    
     <div *ngIf="!mobileView">
         <div  class="menu" *ngFor="let menu of menus">
             <a href={{menu.url}}>{{menu.name}}</a>

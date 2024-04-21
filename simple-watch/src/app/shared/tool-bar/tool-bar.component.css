@@ -23,6 +23,10 @@
         .sub-menu {
             display: block;
         }
+
+        a {
+          font-weight: 400;
+        }
         
     }
 

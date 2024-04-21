@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+}
+
+
+
+
+.menu {
+    width: 200px;
+    position: relative;
+    
+    &:hover {
+        
+    }
+
+      border-bottom: 1px solid gray;
+}
+
+.sub-menu {
+    
+
+    li a {
+        color: white;
+        background-color: black;
+    }
+    li a:hover {
+        background-color: aliceblue;
+    }
+  
+}
+
+
+

@@ -1,1 +1,13 @@
-<app-tool-bar [menus]="menus"></app-tool-bar>
+<mat-drawer-container>
+
+    <mat-drawer #drawer mode="over">
+        <app-mobile-nav [menus]="menus"></app-mobile-nav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="app-container">
+        <app-tool-bar [menus]="menus" (openDrawer)="drawer.toggle()"></app-tool-bar>
+        <router-outlet></router-outlet>
+    </div>
+    </mat-drawer-content>
+
+</mat-drawer-container>
