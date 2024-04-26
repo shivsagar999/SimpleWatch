@@ -1,7 +1,11 @@
 <ul>
     <li *ngFor="let menu of menus; let i = index" class="menu" (click)="toggle(i)">
-        <a *ngIf="menu.url !== null && menu.url !== undefined" href={{menu.url}}> {{menu.name}} </a>
-        <a *ngIf="menu.url === null || menu.url === undefined" href="javascript:void(0)"> {{menu.name}} </a>
+        <div class="flex">
+            <a *ngIf="menu.url !== null && menu.url !== undefined" href={{menu.url}}> {{menu.name}} </a>
+            <a *ngIf="menu.url === null || menu.url === undefined" href="javascript:void(0)"> {{menu.name}} </a>
+            <span class="spacer"></span>
+            <mat-icon *ngIf="menu.subMenu.length > 0">{{menu.active ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
+        </div>
         <ul *ngIf="menu.active" class="sub-menu">
             <li *ngFor="let subMenu of menu.subMenu">
                 <a href={{subMenu.url}}> {{subMenu.name}}</a>

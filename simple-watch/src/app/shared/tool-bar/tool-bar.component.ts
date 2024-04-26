@@ -26,7 +26,7 @@ export class ToolBarComponent {
 
   }
 
-  oenDrawer() {
+  openMenuDrawer() {
     this.openDrawer.emit(true);
   }
 

@@ -1,5 +1,5 @@
 <mat-toolbar class="tool-bar">
-    <button *ngIf="mobileView" (click)="oenDrawer()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button *ngIf="mobileView" (click)="openMenuDrawer()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
 
@@ -14,4 +14,8 @@
             </div>
         </div>
     </div>
+
+    <button  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>settings</mat-icon>
+    </button>
 </mat-toolbar>
